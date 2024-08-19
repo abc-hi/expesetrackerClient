@@ -13,7 +13,7 @@ const Visualization = () => {
   useEffect(() => {
     const fetchChartData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/expenses/chart-data');
+        const response = await axios.get('https://expensetrackerserver-w3dy.onrender.com/chart-data');
         setChartData(response.data);
       } catch (error) {
         console.error(error);

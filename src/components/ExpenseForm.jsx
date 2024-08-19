@@ -17,7 +17,7 @@ const ExpenseForm = ({ onExpenseAdded }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/expenses', { amount, category, date, description });
+      const response = await axios.post('https://expensetrackerserver-w3dy.onrender.com/api/expenses', { amount, category, date, description });
       if (onExpenseAdded) {
         onExpenseAdded(response.data); 
       }

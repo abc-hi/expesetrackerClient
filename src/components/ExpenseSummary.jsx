@@ -10,7 +10,7 @@ const ExpenseSummary = ({ expenses }) => {
   useEffect(() => {
     const fetchSummary = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/expenses/summary');
+        const response = await axios.get('https://expensetrackerserver-w3dy.onrender.com/api/expenses/summary');
         setSummary(response.data);
       } catch (error) {
         console.error('Error fetching summary:', error);
